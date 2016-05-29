@@ -88,6 +88,14 @@ namespace C2CTests
 			Assert.AreEqual(keys['m'], new Tuple<int, int>(2, 6));
 		}
 
+		[TestMethod]
+		public void TestNordicCharacters()
+		{
+			double cost = dist.InputToMatchCost(keys, "åäö","åää");
+
+			Assert.AreEqual(1, cost);
+		}
+
 
 	}
 }

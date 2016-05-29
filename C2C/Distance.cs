@@ -23,7 +23,7 @@ namespace C2C
 				return 0;
 			}
 
-			Regex cleaner = new Regex("[^a-zA-Z]+");
+			Regex cleaner = new Regex("[^a-zA-Zåäö]+");
 
 			input = cleaner.Replace(input.ToLower(), "");
 			match = cleaner.Replace(match.ToLower(), "");
