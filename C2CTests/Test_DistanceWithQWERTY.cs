@@ -33,6 +33,20 @@ namespace C2CTests
 		}
 
 		[TestMethod]
+		public void TestQToZDistance()
+		{
+			double cost = dist.InputToMatchCost(keys, "Q", "Z");
+			Assert.AreEqual(2, cost);
+		}
+
+		[TestMethod]
+		public void TestQToFDistance()
+		{
+			double cost = dist.InputToMatchCost(keys, "Q", "F");
+			Assert.AreEqual(3.16, cost);
+		}
+
+		[TestMethod]
 		public void TestMulToMilk()
 		{
 			double cost = dist.InputToMatchCost(keys, "Mulk", "Milk");
