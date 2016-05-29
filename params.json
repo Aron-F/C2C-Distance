@@ -1,6 +1,6 @@
 {
   "name": "C2c-distance",
   "tagline": "Calculates the distance from one character on the keyboard to another character found in a \"match\" eg. when searching for something. ",
-  "body": "### About C2C\r\nIt measures distance between keys on the keyboard.\r\n\r\n### How it's supposed to work.\r\n![Crudely drawn image depicting a keyboard with QWERTY-layout.](http://i.imgur.com/5ClopuS.png?1)\r\n![crudely drawn image depicting a qwerty-keyboard layout.](http://imgur.com/5ClopuS)\r\nThe idea is that a user inputs a word, if that word is misspelled when compared to say a keyword that you have stored somewhere, you get a number representing the distance that the input word has from the keyword.",
+  "body": "### About C2C\r\nIt measures distance between keys on the keyboard.\r\n\r\n### How it's supposed to work.\r\n![Crudely drawn image depicting a keyboard with QWERTY-layout.](http://i.imgur.com/5ClopuS.png?1)\r\nThe idea is that a user inputs a word, if that word is misspelled when compared to say a keyword that you have stored somewhere, you get a number representing the distance that the input word has from the keyword.",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
