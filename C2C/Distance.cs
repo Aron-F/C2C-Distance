@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace C2C
 {
-	public class C2C
+	public class Distance
 	{
 		private readonly double MaxDefaultVal = 10000;
-
-		public double ScanInput(Dictionary<char, Tuple<int, int>> keyboard, string input, string match)
+		
+		public double InputToMatchCost(Dictionary<char, Tuple<int, int>> keyboard, string input, string match)
 		{
 			if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(match))
 			{
@@ -39,7 +39,7 @@ namespace C2C
 			{
 				inputXY = keyboard[input[i]];
 				matchXY = keyboard[match[i]];
-				cost += Distance(inputXY.Item1, inputXY.Item2, matchXY.Item1, matchXY.Item2);
+				cost += CalculatePointToPointDistance(inputXY.Item1, inputXY.Item2, matchXY.Item1, matchXY.Item2);
 			}
 			return cost;
 		}
@@ -63,7 +63,6 @@ namespace C2C
 			keyboardMappings.Add('o', new Tuple<int, int>(0, 8));
 			keyboardMappings.Add('p', new Tuple<int, int>(0, 9));
 			keyboardMappings.Add('å', new Tuple<int, int>(0, 10));
-
 			keyboardMappings.Add('a', new Tuple<int, int>(1, 0));
 			keyboardMappings.Add('s', new Tuple<int, int>(1, 1));
 			keyboardMappings.Add('d', new Tuple<int, int>(1, 2));
@@ -75,7 +74,6 @@ namespace C2C
 			keyboardMappings.Add('l', new Tuple<int, int>(1, 8));
 			keyboardMappings.Add('ö', new Tuple<int, int>(1, 9));
 			keyboardMappings.Add('ä', new Tuple<int, int>(1, 10));
-
 			keyboardMappings.Add('z', new Tuple<int, int>(2, 0));
 			keyboardMappings.Add('x', new Tuple<int, int>(2, 1));
 			keyboardMappings.Add('c', new Tuple<int, int>(2, 2));
@@ -97,7 +95,7 @@ namespace C2C
 		/// <param name="x1"></param>
 		/// <param name="y1"></param>
 		/// <returns></returns>
-		private double Distance(int x0, int y0, int x1, int y1)
+		private double CalculatePointToPointDistance(int x0, int y0, int x1, int y1)
 		{
 			double deltaX = x0 - x1;
 			double deltaY = y0 - y1;
