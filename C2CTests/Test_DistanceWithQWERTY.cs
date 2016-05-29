@@ -19,6 +19,13 @@ namespace C2CTests
 		}
 
 		[TestMethod]
+		public void TestEqualStrings()
+		{
+			double cost = dist.InputToMatchCost(keys, "ABCDEFG", "ABCDEFG");
+			Assert.AreEqual(0, cost);
+		}
+
+		[TestMethod]
 		public void TestQToADistance()
 		{
 			double cost = dist.InputToMatchCost(keys, "Q", "A");
